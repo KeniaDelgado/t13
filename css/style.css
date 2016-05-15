@@ -1,0 +1,76 @@
+body{
+  font-family: helvetica;
+background-color: slategray;
+
+}
+
+#box{
+    width: 900px;
+    margin: 50px auto;
+}
+
+table {
+    text-align: center;
+    width: 800px;
+    margin: auto;
+
+
+}
+table th {
+    background-color:antiquewhite;
+}
+table tr td{
+    background-color: white;
+}
+table tfoot td{
+    background-color: beige;
+}
+
+
+#up{
+  font-size: 14px;
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 30px;
+  background-color: lightsalmon;
+  text-align: center;
+  margin: auto;
+}
+
+#down{
+    color: whitesmoke;
+    border-radius: 5px;
+
+}
+
+.eliminar{
+    text-align: center;
+    background-color: lightcoral;
+    color: white;
+    width: 20px;
+    cursor: pointer;
+}
+
+
+#agregar:hover{
+
+  cursor: pointer;
+}
+
+
+input{
+    text-align: center;
+    height: 10px;
+    
+}
+h4{
+    display: inline;
+    
+}
+  
+h1{
+    text-align: center
+}
+button{
+    margin: auto;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>T10-Kenia Delgado</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+</head>
+<body>
+  <div id="box">
+        <div id="up">
+    <h1>T10</h1>
+    <h4>ID (Para modificar)</h4>
+    <input id="ide" type="text">
+        <br>
+        <br>
+        
+    <div id="linea">
+    <h4>Matricula</h4>
+    <input id="matricula" type="text">
+    <h4>Nombre</h4>
+    <input id="nombre" type="text" autofocus>
+    <h4>Apellido</h4>
+    <input id="apellido" type="text">
+    
+    <h4>Estatus</h4>
+     <select id="status">
+         <option value="Inscrito">Inscrito</option>
+         <option value="No Inscrito">No inscrito</option>
+         <option value="Pasante">Pasante</option>
+         <option value="Egresado">Egresado</option>
+</select> 
+    <br>
+    <br>
+    <button id="agregar"><i class="fa fa-plus" aria-hidden="true"></i></button>
+    <button id="modificar"><i class="fa fa-exchange" aria-hidden="true"></i></button>
+        <button id="borrar"><i class="fa fa-eraser" aria-hidden="true"></i></button>
+    </div>
+    </div>
+    <div id="#down">
+      <section id="contenido">
+        <table>
+           <thead>
+            <tr>
+                <th id="test">Id</th>
+                <th>Matricula </th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Estatus</th>
+                <th><button id="limpiar"><i class="fa fa-refresh" aria-hidden="true"></i></button></th>
+            </tr>
+           </thead>
+
+           <tbody>
+
+           </tbody>
+
+        </table>
+      </section>
+    </div>
+
+  </div>
+</body>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.3.min.js" type="text/javascript"></script>
+<script src="js/code.js"></script>
+</html>
