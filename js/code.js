@@ -1,20 +1,18 @@
 $(document).ready(function llamar(){
-  //Para cargar una maldita tabla
+    
   var idex = $('input[id=ide]').val();
   var Matricula = $('input[id=matricula]').val();
   var Nombre = $('input[id=nombre]').val();
   var Apellido = $('input[id=apellido]').val();
   var status = $( "#status option:selected" ).val();
-    
-  
-  //var ide = $('input[id=apellido]').val();
   var eliminar ;
 
   var thead = $('<thead></thead>');
   var fila;
   var div = $('<td><button class="eliminar">x</button></td>');
   var input = $('<input id="matricula" type="text">');
-     var estudiante = {
+     
+    var estudiante = {
     "registration_number": Matricula,
     "name": Nombre,
     "last_name": Apellido,
@@ -67,12 +65,7 @@ $("#limpiar").click(function(){
 
 });
 $("#agregar").click(function(){
-    idex = $('input[id=ide]').val();
-   Matricula = $('input[id=matricula]').val();
-  Nombre = $('input[id=nombre]').val();
-  Apellido = $('input[id=apellido]').val();
-  status = $( "#status option:selected" ).val();
-if((Matricula.length > 0)||(Nombre.length > 0)||(Apellido.length > 0)){
+
     $.ajax({
       url: "https://andreihelo-restful-api.herokuapp.com/students",
       method: "POST",
@@ -82,15 +75,16 @@ if((Matricula.length > 0)||(Nombre.length > 0)||(Apellido.length > 0)){
       }
 
   });  
-}else{
-       alert("¡Faltan datos!");
-}
 
 });
     
 $("#borrar").click(function(){
-    
-    reset();
+    $('input[id=ide]').val('');
+    $('input[id=matricula]').val('');
+    $('input[id=nombre]').val('');
+    $('input[id=apellido]').val('');
+    $('input[id=status]').val('');
+    $('input[id=matricula]').focus();
 });
 
 /*
@@ -109,21 +103,13 @@ $("#modificar").click(function(){
 
   });
 
-});*/matricula
-function reset(){
+});*/
+    
     $('input[id=ide]').val('');
     $('input[id=matricula]').val('');
     $('input[id=nombre]').val('');
     $('input[id=apellido]').val('');
     $('input[id=status]').val('');
     $('input[id=matricula]').focus();
-}
-function reload(){
-    idex = $('input[id=ide]').val();
-   Matricula = $('input[id=matricula]').val();
-  Nombre = $('input[id=nombre]').val();
-  Apellido = $('input[id=apellido]').val();
-  status = $( "#status option:selected" ).val();
-}
-reset();
+
     });
