@@ -1,22 +1,17 @@
 $(document).ready(function(){
- // var idex = $('input[id=ide]').val();
-  var Matricula = $('input[id=matricula]').val();
-  var Nombre = $('input[id=nombre]').val();
-  var Apellido = $('input[id=apellido]').val();
-  var status = $( '#status option:selected' ).val();
+    
+  
   var eliminar ;
 
+  var thead = $('<thead></thead>');
   var fila;
   var div = $('<td><button class="eliminar">x</button></td>');
-     var estudiante = {
-    "registration_number": parseInt(Matricula),
-    "name": Nombre,
-    "last_name": Apellido,
-    "status": status
-  };
-/*$("#test").click(function() {
+  var input = $('<input id="matricula" type="text">');
+     
+    
+$("#test").click(function() {
    prompt("Please enter your name cuack", "Hello");
-});*/
+});
 
 $("#limpiar").click(function(){
     $.ajax({
@@ -61,18 +56,24 @@ $("#limpiar").click(function(){
 
 });
 $("#agregar").click(function(){
+    var idex = $('input[id=ide]').val();
+  var Matricula = parseInt($('input[id*=matricula]').val());
+  var Nombre = $('input[id*=nombre]').val();
+  var Apellido = $('input[id*=apellido]').val();
+  var status = $( "#status option:selected" ).val();
+    var estudiante = {
+    "registration_number": Matricula,
+    "name": Nombre,
+    "last_name": Apellido,
+    "status": status
+  };
     $.ajax({
       url: "https://andreihelo-restful-api.herokuapp.com/students",
       method: "POST",
       data: estudiante,
       success: function(result, status, xhr) {
          alert("Registrado exitosamente");
-      },
-       error: function(result, status, xhr) {
-         alert("Error");
-           alert(xhr);
-      } 
-      
+      }
 
   });  
 
@@ -111,5 +112,4 @@ $("#modificar").click(function(){
     $('input[id=apellido]').val('');
     $('input[id=status]').val('');
     $('input[id=matricula]').focus();
-
-    });
+});
