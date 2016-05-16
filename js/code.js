@@ -97,7 +97,7 @@ function refrescar(){
                        Apellido = $(this).prev().prev().text();
                      }
                      var status = $( '#status option:selected' ).val();
-                     if(status.length === 0){
+                     if(status  === $('#status option:first').val()){
                        status = $(this).prev().text();
                      }
 
