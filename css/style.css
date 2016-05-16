@@ -1,45 +1,70 @@
 body{
-  font-family: helvetica;
-background-color: slategray;
+font-family: "Trebuchet MS", Helvetica, sans-seri;
+background-image: url("http://pre02.deviantart.net/cf35/th/pre/i/2012/108/0/b/striped_vintage_background_by_arghus-d4wm5bx.jpg");
+background-position: center;
+background-attachment: fixed;
 
 }
 
 #box{
     width: 900px;
     margin: 50px auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
-table {
-    text-align: center;
-    width: 800px;
-    margin: auto;
-
-
-}
-table th {
-    background-color:antiquewhite;
-}
-table tr td{
-    background-color: white;
-}
-table tfoot td{
-    background-color: beige;
-}
-
 
 #up{
-  font-size: 14px;
-  color: white;
+  background-color: white;
+  border-top-right-radius:5px;
+  border-top-left-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color:  #b35900;
+  font-size: 5px;
+  left: auto;
   padding-top: 5px;
   padding-bottom: 30px;
-  background-color: lightsalmon;
+  position: fixed;
   text-align: center;
-  margin: auto;
+  top: 50px;
+  width: 700px;
+  right: auto;
+  visibility: hidden;
+  
+}
+
+#cerrar{
+  text-align: right;
+  margin-right: 8px;
+}
+
+#matricula{
+  width: 100px;
+}
+
+#nombre,#apellido{
+  width: 120px;
 }
 
 #down{
     color: whitesmoke;
     border-radius: 5px;
+}
+table {
+
+    text-align: center;
+    width: 900px;
+    border-collapse: collapse;
+
+
+}
+table th {
+    color: white;
+    background-color:  #a3a375;
+    padding: 8px;
+}
+table tr td{
+    background-color: white;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
 
 }
 
@@ -47,30 +72,137 @@ table tfoot td{
     text-align: center;
     background-color: lightcoral;
     color: white;
-    width: 20px;
+    transition: .3s linear;
+}
+.eliminar:hover{
+    background-color: white;
+    color: lightcoral;
     cursor: pointer;
 }
-
-
-#agregar:hover{
-
-  cursor: pointer;
-}
-
-
 input{
-    text-align: center;
-    height: 10px;
-    
+  margin-right: 15px;
 }
+input,select {
+  font-family: sans-serif;
+  font-size: 15px;
+  border-color: rgba(255, 0, 0, 0);
+  box-shadow: 0px 0px 2px rgba(77, 166, 255, 0.5);
+  border-radius: 2px;
+  text-align: center;
+  transition: .3s linear;
+}
+
+input:focus {
+  box-shadow: 0px 0px 2px purple;
+  border-color: rgba(255, 0, 0, 0);
+}
+
 h4{
     display: inline;
-    
+
 }
-  
+
 h1{
     text-align: center
 }
 button{
+    color: white;
+    background-color: #33cccc;
+    border : solid #33cccc;
+    border-radius: 2px;
     margin: auto;
+    transition: .3s linear;
+}
+button:hover{
+  color: gray;
+  background-color: white;
+  border : solid white;
+  cursor: pointer;
+}
+.modificar,.show,.limpiar{
+  width: 30px;
+  color: white;
+  background-color: #33cccc;
+  margin: auto;
+  transition: .3s linear;
+}
+
+.show{
+  background-color: #00cc66;
+}
+
+.show:hover{
+  background-color: white;
+  color: #00cc66;
+  cursor: pointer;
+}
+
+.limpiar{
+  color: #33cccc;
+  background-color: white;
+}
+
+.limpiar:hover{
+  background-color: white;
+  color: #669999;
+  cursor: pointer;
+}
+
+.modificar:hover{
+  color: gray;
+  background-color: white;
+  cursor: pointer;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+
+input[type=number]::-webkit-inner-spin-button {
+
+    -webkit-appearance: none;
+
+    margin: 0;
+
+}
+
+input[type=number] {
+
+    -moz-appearance:textfield;
+
+}
+#mat{
+  margin-left: 65px;
+}
+.slct {
+
+    margin-right: 65px;
+    float: right;
+    width: 100px;
+    overflow: hidden;
+    background: white url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-arrow-down-b-128.png") no-repeat 100% 50%;
+    background-size: 15px;
+}
+
+.slct select {
+  padding: 5px 8px;
+  width: 120%;
+  border: none;
+  background: transparent;
+  background-image: none;
+  text-align: left;
+  -webkit-appearance: none;
+
+}
+
+
+
+.blur-all {
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
+}
+.white{
+  background: pink;
+  width: 1000px;
 }
