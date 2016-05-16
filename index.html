@@ -9,33 +9,31 @@
 </head>
 <body>
   <div id="box">
-        <div id="up">
-    <h1>T10</h1>
-    <h4>ID (Para modificar)</h4>
-    <input id="ide" type="text">
-        <br>
-        <br>
-        
+    <div id="up">
+    <div id="cerrar"><i class="fa fa-times" aria-hidden="true"></i></div>
+    <h1 id="upi">T13</h1>
     <div id="linea">
-    <h4>Matricula</h4>
+    <h4 id="mat">Matricula:</h4>
     <input id="matricula" type="number" autofocus>
-    <h4>Nombre</h4>
+    <h4>Nombre:</h4>
     <input id="nombre" type="text">
-    <h4>Apellido</h4>
+    <h4>Apellido:</h4>
     <input id="apellido" type="text">
-    
-    <h4>Estatus</h4>
-     <select id="status">
-         <option value="Inscrito">Inscrito</option>
-         <option value="No Inscrito">No inscrito</option>
-         <option value="Pasante">Pasante</option>
-         <option value="Egresado">Egresado</option>
-</select> 
+
+    <h4>Estatus:</h4>
+    <div class="slct">
+      <select id="status" >
+         <option value="vacio" selected="selected"></option>
+          <option value="Inscrito">Inscrito</option>
+          <option value="No Inscrito">No inscrito</option>
+          <option value="Pasante">Pasante</option>
+          <option value="Egresado">Egresado</option>
+  </select>
+    </div>
     <br>
     <br>
     <button id="agregar"><i class="fa fa-plus" aria-hidden="true"></i></button>
-    <button id="modificar"><i class="fa fa-exchange" aria-hidden="true"></i></button>
-        <button id="borrar"><i class="fa fa-eraser" aria-hidden="true"></i></button>
+    <button id="borrar"><i class="fa fa-eraser" aria-hidden="true"></i></button>
     </div>
     </div>
     <div id="#down">
@@ -43,12 +41,13 @@
         <table>
            <thead>
             <tr>
-                <th id="test">Id</th>
+                <th>Id</th>
                 <th>Matricula </th>
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Estatus</th>
-                <th><button id="limpiar"><i class="fa fa-refresh" aria-hidden="true"></i></button></th>
+                <th class="show"><i class="fa fa-plus" aria-hidden="true"></i></th>
+                <th class="limpiar"><i class="fa fa-refresh" aria-hidden="true"></i></th>
             </tr>
            </thead>
 
