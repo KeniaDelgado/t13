@@ -97,8 +97,7 @@ function refrescar(){
                        Apellido = $(this).prev().prev().text();
                      }
                      var status = $( '#status option:selected' ).val();
-                 
-                     if(status  === $('#status option:first').val()){
+                     if(status.length === 0){
                        status = $(this).prev().text();
                      }
 
@@ -147,9 +146,8 @@ $("#agregar").click(function(){
     
  if((Matricula.length === 0)||(Matricula.length < 6)||(Matricula.length > 6)){
      mensaje = mensaje + "- Falta matricula\n"; 
-     
      if((Matricula.length < 6)||(Matricula.length > 6)){
-      mensaje = mensaje + "- La matricula debe tener 6 caracteres \n" ;   
+      mensaje = mensaje + "- La matricula solo puede tener 6 caracteres \n" ;   
      } 
     
   }
@@ -167,7 +165,7 @@ $("#agregar").click(function(){
         alert(mensaje);
     }
 
-if((Matricula.length > 0)&&(Nombre.length > 0)&&(Apellido.length > 0)&&(status  === $('#status option:first').val())&&(Matricula.length === 6)){
+if((Matricula.length > 0)&&(Nombre.length > 0)&&(Apellido.length > 0)&&(status.length > 0)&&(Matricula.length === 6)){
 
      var estudiante = {
       "registration_number": Matricula,
