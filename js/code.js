@@ -184,8 +184,6 @@ if((Matricula.length > 0)&&(Nombre.length > 0)&&(Apellido.length > 0)&&(status.l
           refrescar();
      }
 });
-}else{
-  alert("Error");
 }
 });
 
