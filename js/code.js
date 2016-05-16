@@ -97,6 +97,7 @@ function refrescar(){
                        Apellido = $(this).prev().prev().text();
                      }
                      var status = $( '#status option:selected' ).val();
+                 
                      if(status  === $('#status option:first').val()){
                        status = $(this).prev().text();
                      }
@@ -145,10 +146,11 @@ $("#agregar").click(function(){
   var mensaje = "Error(es) destectado(s) \n";
     
  if((Matricula.length === 0)||(Matricula.length < 6)||(Matricula.length > 6)){
+     mensaje = mensaje + "- Falta matricula\n"; 
+     
      if((Matricula.length < 6)||(Matricula.length > 6)){
-      mensaje = mensaje + "- La matricula solo puede tener 6 caracteres \n" ;   
-     }
-      mensaje = mensaje + "- Falta matricula\n";  
+      mensaje = mensaje + "- La matricula debe tener 6 caracteres \n" ;   
+     } 
     
   }
   if(Nombre.length === 0){
