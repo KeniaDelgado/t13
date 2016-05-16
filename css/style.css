@@ -36,6 +36,10 @@ background-attachment: fixed;
   margin-right: 8px;
 }
 
+#cerrar{
+    cursor: pointer;
+}
+
 #matricula{
   width: 100px;
 }
