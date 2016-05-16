@@ -60,6 +60,12 @@ function refrescar(){
             fila.append(div);
           $('tbody').append(fila);
 
+            $('#matricula').keydown(function(e) {  
+              // Validacion para no ingresar letras
+            if ((e.keyCode < 48 || e.keyCode > 57) && (e.keyCode < 96 || e.keyCode > 105) && e.keyCode != 8 && e.keyCode != 9)
+                
+                e.preventDefault();
+            });
             div.click(function(){
               eliminar =  $(this).prev().prev().prev().prev().prev().prev().text();
               var r = confirm("Estas apunto de eliminar este registro! ("+ eliminar +")");
