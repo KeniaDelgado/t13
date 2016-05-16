@@ -165,7 +165,7 @@ $("#agregar").click(function(){
         alert(mensaje);
     }
 
-if((Matricula.length > 0)&&(Nombre.length > 0)&&(Apellido.length > 0)&&(status.length > 0)&&(Matricula.length === 6)){
+if((Matricula.length > 0)&&(Nombre.length > 0)&&(Apellido.length > 0)&&(status  === $('#status option:first').val())&&(Matricula.length === 6)){
 
      var estudiante = {
       "registration_number": Matricula,
