@@ -142,7 +142,7 @@ $("#agregar").click(function(){
   var Nombre = $('input[id=nombre]').val();
   var Apellido = $('input[id=apellido]').val();
   var status = $( '#status option:selected' ).val();
-  var mensaje = "Error(es) destectado(s) \n";
+   var mensaje = "Error(es) destectado(s) \n";
     
  if((Matricula.length === 0)||(Matricula.length < 6)||(Matricula.length > 6)){
      mensaje = mensaje + "- Falta matricula\n"; 
@@ -184,6 +184,8 @@ if((Matricula.length > 0)&&(Nombre.length > 0)&&(Apellido.length > 0)&&(status.l
           refrescar();
      }
 });
+}else{
+  alert("Error");
 }
 });
 
