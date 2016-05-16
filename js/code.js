@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  alert("⇄ Single click abre la caja \n Double click actualiza");
+  alert("Modificar/actualizar ( ⇄ )\n -Single click abre la caja \n -Double click actualiza");
   var eliminar ;
   var fila;
   var div = $('<td><button></button></td>');
