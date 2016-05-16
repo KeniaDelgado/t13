@@ -20,7 +20,7 @@ $(document).ready(function(){
     width: "900px"
   }, 800 );
     $("#box").animate({
-    margin: "243px auto"
+    margin: "235px auto"
     }, 800 );
 
   }
@@ -97,7 +97,7 @@ function refrescar(){
                        Apellido = $(this).prev().prev().text();
                      }
                      var status = $( '#status option:selected' ).val();
-                     if(status.length === 0){
+                     if(status  === $('#status option:first').val()){
                        status = $(this).prev().text();
                      }
 
@@ -142,8 +142,30 @@ $("#agregar").click(function(){
   var Nombre = $('input[id=nombre]').val();
   var Apellido = $('input[id=apellido]').val();
   var status = $( '#status option:selected' ).val();
+  var mensaje = "Error(es) destectado(s) \n";
+    
+ if((Matricula.length === 0)||(Matricula.length < 6)||(Matricula.length > 6)){
+     if((Matricula.length < 6)||(Matricula.length > 6)){
+      mensaje = mensaje + "- La matricula solo puede tener 6 caracteres \n" ;   
+     }
+      mensaje = mensaje + "- Falta matricula\n";  
+    
+  }
+  if(Nombre.length === 0){
+    mensaje = mensaje + "- Falta Nombre\n";  
+  }
+  if(Apellido.length === 0){
+    mensaje = mensaje + "- Falta Apellido\n";
+    }
+    if(status  === $('#status option:first').val()){
+     mensaje = mensaje + "- Falta status\n";
+    }
+    
+    if(mensaje.length > 26){
+        alert(mensaje);
+    }
 
-if((Matricula.length > 0)&&(Nombre.length > 0)&&(Apellido.length > 0)&&(status.length > 0)&&(Matricula.length === 6)){
+if((Matricula.length > 0)&&(Nombre.length > 0)&&(Apellido.length > 0)&&(status  === $('#status option:first').val())&&(Matricula.length === 6)){
 
      var estudiante = {
       "registration_number": Matricula,
@@ -162,8 +184,6 @@ if((Matricula.length > 0)&&(Nombre.length > 0)&&(Apellido.length > 0)&&(status.l
           refrescar();
      }
 });
-}else{
-  alert("Error");
 }
 });
 
